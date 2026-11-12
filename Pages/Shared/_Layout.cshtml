@@ -1,0 +1,41 @@
+﻿
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - MyBlog</title>
+
+    <link rel="stylesheet" href="~/css/style.css"
+          asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+</head>
+<body>
+
+    <header class="header">
+        <div class="container navbar">
+            <a asp-page="/Index" class="logo">
+                My<span>Blog.</span>
+            </a>
+
+            <nav>
+                <a asp-page="/Index">Home</a>
+                <a asp-page="/Index" asp-fragment="posts">Articles</a>
+                <a asp-page="/Login">Login</a>
+                <a asp-page="/Register">Register</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        @RenderBody()
+    </main>
+
+    <footer class="footer">
+        <p>© 2026 MyBlog. All rights reserved.</p>
+    </footer>
+
+    @await RenderSectionAsync("Scripts", required: false)
+
+</body>
+</html>

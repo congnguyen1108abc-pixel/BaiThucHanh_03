@@ -1,0 +1,65 @@
+﻿@page
+@{
+    ViewData["Title"] = "Home";
+}
+
+<section class="hero">
+    <div class="container">
+        <p class="hero-label">WELCOME TO MYBLOG</p>
+
+        <h1>
+            Share Your Stories.<br />
+            Inspire The World.
+        </h1>
+
+        <p>
+            A simple place to share ideas, experiences
+            and stories with everyone.
+        </p>
+
+        <a href="#posts" class="btn-primary">
+            Explore Articles
+        </a>
+    </div>
+</section>
+
+<main class="container main-content">
+
+    <section id="createPost" class="create-post hidden">
+        <h2>Create a New Post</h2>
+
+        <form id="postForm">
+            <input type="text"
+                   id="postTitle"
+                   placeholder="Enter post title"
+                   required />
+
+            <textarea id="postContent"
+                      placeholder="Write your story..."
+                      required></textarea>
+
+            <button type="submit" class="btn-primary">
+                Publish Post
+            </button>
+        </form>
+    </section>
+
+    <section id="posts">
+        <div class="section-heading">
+            <p class="hero-label">OUR BLOG</p>
+            <h2>Latest Articles</h2>
+        </div>
+
+        <div id="postList" class="post-list">
+            <article class="post-card">
+                <div class="post-meta">Featured Article</div>
+                <h3>Welcome to MyBlog</h3>
+                <p>
+                    This is the beginning of our blogging journey.
+                    Share your ideas and stories with the world.
+                </p>
+            </article>
+        </div>
+    </section>
+
+</main>

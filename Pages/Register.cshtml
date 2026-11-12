@@ -1,0 +1,41 @@
+﻿@page
+@{
+    ViewData["Title"] = "Register";
+}
+
+<section class="auth-section">
+    <div class="auth-card">
+        <h1>Create Account</h1>
+        <p>Join MyBlog and share your stories.</p>
+
+        <form id="registerForm">
+            <label for="fullName">Full Name</label>
+            <input type="text" id="fullName"
+                   placeholder="Enter your name" required />
+
+            <label for="email">Email Address</label>
+            <input type="email" id="email"
+                   placeholder="Enter your email" required />
+
+            <label for="password">Password</label>
+            <input type="password" id="password"
+                   placeholder="Create a password"
+                   minlength="6" required />
+
+            <label for="confirmPassword">Confirm Password</label>
+            <input type="password" id="confirmPassword"
+                   placeholder="Confirm your password" required />
+
+            <button type="submit" class="btn-primary">
+                Create Account
+            </button>
+
+            <p id="registerMessage" class="form-message"></p>
+        </form>
+
+        <div class="auth-footer">
+            Already have an account?
+            <a asp-page="/Login">Login here</a>
+        </div>
+    </div>
+</section>
